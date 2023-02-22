@@ -19,7 +19,13 @@
             <h1>TO DO LIST</h1>
 
             <div class="task-box">
-                <div class="task" v-for="task in taskList">
+                <div
+                    v-for="task in taskList"
+                    class="task"
+                    :class="{
+                        done: task.done
+                    }"
+                >
                     <p>{{task.taskName}}</p>
                 </div>
             </div>

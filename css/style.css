@@ -17,10 +17,6 @@ h1 {
     color: white;
 }
 
-.task p {
-    font-size: 1.2rem;
-}
-
 /* STRUTTURA */
 html,
 body {
@@ -47,6 +43,8 @@ body {
 
 .task-box .task {
     padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     border-bottom: 1px solid lightgray;
 }
 
@@ -57,4 +55,10 @@ body {
 .task-box .task:last-child {
     padding: 1rem 0.5rem 0;
     border: none;
+}
+
+.task-box .task.done {
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #82b1ff;
 }
