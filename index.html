@@ -19,29 +19,15 @@
             <h1>TO DO LIST</h1>
 
             <div class="task-box">
-                <div class="task">
-                    <p>Task</p>
-                </div>
-                <div class="task">
-                    <p>Task</p>
-                </div>
-                <div class="task">
-                    <p>Task</p>
-                </div>
-                <div class="task">
-                    <p>Task</p>
-                </div>
-                <div class="task">
-                    <p>Task</p>
-                </div>
-                <div class="task">
-                    <p>Task</p>
+                <div class="task" v-for="task in taskList">
+                    <p>{{task.taskName}}</p>
                 </div>
             </div>
             
         </div>
         <!-- JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
