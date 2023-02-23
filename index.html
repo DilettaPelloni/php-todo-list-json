@@ -30,15 +30,18 @@
                 </div>
             </div>
 
-            <form>
+            <form @submit.prevent>
                 <div class="input-box">
-                    <input type="text" placeholder="Inserisci una nuova task">
+                    <input
+                        type="text"
+                        placeholder="Inserisci una nuova task"
+                        v-model="newTask"
+                    >
                 </div>
                 <div class="btn-box">
                     <button type="submit">Aggiungi</button>
                 </div>
             </form>
-            
         </div>
         <!-- JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

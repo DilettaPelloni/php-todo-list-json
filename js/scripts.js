@@ -5,6 +5,7 @@ createApp({
         return {
             apiUrl:'./api.php',
             taskList: [],
+            newTask:'',
         }//return
     },//data
     methods: {
