@@ -31,12 +31,12 @@ body {
 }
 
 /* ELEMENTI */
-
+/* ----------------- TASK BOX -----------------*/
 .task-box {
     margin: 0 auto;
     padding: 2rem;
     width: 40%;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: white;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
 }
@@ -46,6 +46,7 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
     border-bottom: 1px solid lightgray;
+    cursor: pointer;
 }
 
 .task-box .task:first-child {
@@ -61,4 +62,49 @@ body {
     font-weight: 400;
     text-decoration: line-through;
     color: #82b1ff;
+}
+
+/* ----------------- INPUT BOX -----------------*/
+form {
+    display: flex;
+    margin: 2rem auto;
+    height: 4rem;
+    width: 40%;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
+}
+
+.input-box {
+    flex-grow: 1;
+    padding-left: 2rem;
+    border-radius: 15px 0 0 15px;
+    background-color: white;
+}
+
+.input-box input {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+}
+
+.btn-box button {
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    background-color: #0f0c29;
+    cursor: pointer;
+}
+
+.btn-box button:hover {
+    background-color: #283593;
 }
