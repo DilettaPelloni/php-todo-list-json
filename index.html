@@ -20,11 +20,12 @@
 
             <div class="task-box">
                 <div
-                    v-for="task in taskList"
+                    v-for="task, index in taskList"
                     class="task"
                     :class="{
                         done: task.done
                     }"
+                    @click="toggleDone(task,index)"
                 >
                     <p>{{task.taskName}}</p>
                 </div>

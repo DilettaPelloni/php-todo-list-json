@@ -29,6 +29,18 @@ createApp({
                 this.newTask= '';
             });
         },//addTask
+        toggleDone(task, index) {
+            task.done = !task.done;
+            axios.post('./update.php', {
+                updateType: 'toggleDone',
+                index: index,
+            }, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+            .then((response) => { console.log(response); });
+        },//toggleDone
     },//methods
     created() {
 		this.readData();
