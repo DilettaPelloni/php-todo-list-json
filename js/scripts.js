@@ -9,12 +9,12 @@ createApp({
         }//return
     },//data
     methods: {
-        readData() {
+        getData() {
             axios.get('./read.php')
             .then((response) => {
                 this.taskList = response.data.taskList;
             });
-        },//readData
+        },//getData
         addTask() {
             axios.post('./create.php', {
                 newTask: this.newTask
@@ -25,7 +25,7 @@ createApp({
             })
             .then((response) => {
                 console.log(response);
-                this.readData();
+                this.getData();
                 this.newTask= '';
             });
         },//addTask
@@ -43,6 +43,6 @@ createApp({
         },//toggleDone
     },//methods
     created() {
-		this.readData();
+		this.getData();
 	}//mounted
 }).mount('#app');

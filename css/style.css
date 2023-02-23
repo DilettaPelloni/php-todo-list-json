@@ -42,6 +42,8 @@ body {
 }
 
 .task-box .task {
+    display: flex;
+    align-items: center;
     padding: 1rem 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -62,6 +64,25 @@ body {
     font-weight: 400;
     text-decoration: line-through;
     color: #82b1ff;
+}
+
+.task-box .task .task-name {
+    flex-grow: 1;
+}
+
+.task-box .task button {
+    padding: 0.8rem 1rem;
+    color: white;
+    background-color: #d81b60;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.task-box .task button:hover {
+    color: #d81b60;
+    background-color: white;
+    border: 2px solid #d81b60;
 }
 
 /* ----------------- INPUT BOX -----------------*/
