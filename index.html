@@ -19,7 +19,7 @@
         <div id="app">
 
             <h1>TO DO LIST</h1>
-
+            
             <div class="task-box">
                 <div
                     v-for="task, index in taskList"
@@ -27,14 +27,21 @@
                     :class="{
                         done: task.done
                     }"
-                    @click="toggleDone(task,index)"
                 >
-                    <p class="task-name">
+                    <p
+                        class="task-name"
+                        @click="toggleDone(task,index)"
+                    >
                         {{task.taskName}}
                     </p>
-                    <button>
+                    <button
+                        @click="deleteTask(index)"
+                    >
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
+                </div><!-- CHIUSURA TASK -->
+                <div v-if="taskList.length == 0">
+                    <h3>Aggiungi un nuovo elemento alla lista per cominciare</h3>
                 </div>
             </div>
 

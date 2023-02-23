@@ -17,6 +17,11 @@ h1 {
     color: white;
 }
 
+h3 {
+    padding-block: 1rem;
+    color: #d81b60;
+}
+
 /* STRUTTURA */
 html,
 body {
@@ -34,7 +39,7 @@ body {
 /* ----------------- TASK BOX -----------------*/
 .task-box {
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem 2rem;
     width: 40%;
     border-radius: 15px;
     background-color: white;
@@ -44,19 +49,18 @@ body {
 .task-box .task {
     display: flex;
     align-items: center;
-    padding: 1rem 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
     border-bottom: 1px solid lightgray;
     cursor: pointer;
 }
 
-.task-box .task:first-child {
-    padding: 0 0.5rem 1rem;
+.task-box .task .task-name {
+    flex-grow: 1;
+    padding: 1rem 0.5rem;
 }
 
 .task-box .task:last-child {
-    padding: 1rem 0.5rem 0;
     border: none;
 }
 
@@ -64,10 +68,6 @@ body {
     font-weight: 400;
     text-decoration: line-through;
     color: #82b1ff;
-}
-
-.task-box .task .task-name {
-    flex-grow: 1;
 }
 
 .task-box .task button {

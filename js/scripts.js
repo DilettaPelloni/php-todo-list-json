@@ -29,6 +29,19 @@ createApp({
                 this.newTask= '';
             });
         },//addTask
+        deleteTask(index) {
+            axios.post('./delete.php', {
+                index: index
+            }, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+            .then((response) => {
+                console.log(response);
+                this.getData();
+            });
+        },//deleteTask
         toggleDone(task, index) {
             task.done = !task.done;
             axios.post('./update.php', {
